@@ -110,6 +110,232 @@ step 2: Inside the Detail constructor, the constructor takes the two parameter w
 
 step 3: And the class have a method named classMethod(). 
 
-step 4: And the have an condition to print the variable name and address. 
+step 4: And the constructor have an statement, to print the variable name and address. 
 
-step 5: 
+step 5: Finlly, A variale will be created by the class with the 
+help of new keyword. 
+
+step 6: Then we can access the property and method by the object name. 
+
+step 7: A class is an templet to create object. 
+
+step 8: Inside the class, we can declatre a method and property in privetly. 
+
+step 9: With the help of static keyword, we can create an private method and property. 
+
+step 10: And the object can't access that private property and method. 
+
+step 11: The pirivate property and method can be accessed by the class name. 
+
+#### Psudocode: 
+```
+class Detail {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    classMethod() {
+        PRINT `Hi ${this.name} your age is ${this.age}`);
+    }
+}
+
+const obj = new Detail("Bennison Devadoss", 21);
+obj.classMethod();
+class Person {
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    static staticMethod(name, address) {
+        console.log(`${name} from ${address}`)
+    }
+}
+
+SET person = new Person("Bennison", "Tirunelveli")
+PRINT person
+Person.staticMethod("Bennison Devadoss", "Tirunelveli")
+```
+
+#### 6: this inside the class method. 
+
+####  Algorithm: 
+
+step 1: We would use this keyword inside the constructor in class. 
+
+step 2: With the help of the this keyword the variable will be assigned to an objects. 
+
+step 3: Using this keyword, we can declare a function inside the class, and the method can be accessed by the objects.
+
+step 4: Inside the class the this keyword must be declared inside the constructor. then only the property and method will be accessed by the objects. 
+
+#### Psudocode: 
+```
+class Detail {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+        this.arrow = () => { PRINT "I am inside the constructor" };
+    }
+    method() {
+        PRINT `Hello ${this.name}, your age is ${this.age}`)
+    }
+};
+SET person = new Detail("Bennison Devadoss", 21);
+person.arrow()
+```
+
+#### 7: ExecutionOrder
+
+#### Algorithm: 
+
+step 1: First the ex() is called then the JavaScript interpreter goes into the function ex
+
+step 2: And then it prints the ex function. 
+
+step 3: Now the setTime out executed.
+
+step 4: While the setTimeout takes one second, The call stack executes the next statement(ex2()).
+
+step 5: After setTimeout took one second, the callback function goes to callBack queue. 
+
+step 6: Then the statement (ex1()) is pushed to callstack, Finally the ex1 is executed. 
+
+#### Psudocode: 
+```
+SET ex1 = () => console.log(ex1)
+SET ex2 = () => console.log(ex2)
+SET ex = () => {
+    PRINT ex
+    setTimeout(ex1, 1000)
+    ex2()
+}
+ex()
+```
+
+#### 8: Event loops in JavaScript
+
+#### What is call stack ? 
+
+```
+* Every Browser engine have an JavaScript engine. 
+
+* inside the javascript enine, an call stack is there. 
+
+* Every Javacript program is executed in inside the callstack. 
+
+* While the program execution , an global execution context is created. 
+
+* Then only the program is ready to executiom line by line. 
+
+* When the program is executed line by line, if the callstack see an function call, then the call stack create an another execution contex to that function. 
+
+* After the function is executed,  and that function execution context is deleted. 
+
+* And then the call stack executes the program in global execution context. 
+
+* Once the program execution is finished, the global execution context is deleted. 
+
+* This is how an call stacks works 
+```
+
+#### What is Event Loop: 
+
+```
+* The job of the event loop is check the call back queue. and push the call back fuction from callback queue to call stack. 
+
+* If our program have an setTimeout function, While the exection time, when the call stack see the setTimeOut function, the settimeout function starts the timer function from the browser. 
+
+* setTimeOut function must need an call back function. 
+
+* Till the timer is stoped, the call back function waits. 
+
+* But the call stack don't wait to timer. the call stack executes the next statements. 
+
+* Once the timer is finished, the callback function is not directly moved to call stack. 
+
+* The call back function is moved to call back queue. 
+
+* An event loop checks the call back queue and call stack.
+
+* An event loop job is, When the call back function have an call back function.
+
+* Then the call stack is free, the event loop push the call back function from call back queue to call stack. 
+
+* Then only the call stack creats an execution context to that call back function. 
+
+* And finally, that call back function is executed by the call stack. 
+```
+
+#### 10: Super keyword inside the class
+
+#### Algorithm: 
+
+step 1: We can use super keyword inside the child class. 
+
+step 2: if you Declare a variable inside the child constructor, and the variable which is in the parent consructor, then our program will give the errror message. 
+
+step 3: to prevent this error message, the supper keyword should be used in child class constructor before the this keyword. 
+
+step 4: Then we can use the variable name whice is already in the parent constructor. 
+
+#### Psudocode: 
+```
+class Detail {
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    method() {
+        return `I am ${this.name}, from ${this.address}`;
+    }
+}
+
+class Person extends Detail {
+    constructor(name, address, age) {
+        super(name, address)  
+        this.age = age
+    }
+    method() {
+        console.log(`${super.method()}, and I am ${this.age}.`);
+    }
+
+}
+
+SET person1 = new Person("Bennison", "Tirunelveli", 21);
+
+person1.method(); 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
