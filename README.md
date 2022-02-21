@@ -34,6 +34,7 @@ arrow("Bennison Devadoss", "Tirunelveli")
 
 #### Psudocode:
 
+
 step 1: Get the input value as a string. 
 
 step 2: Inside the function I created an logic to find the permutaion. 
@@ -62,9 +63,53 @@ FUNCTION permutation(string) {
 permutation("ABCD")
 ```
 
-#### 3: 
+#### 3: CallBack function in Events. 
 
+#### Algorithm: 
 
+step 1: A call back function is created. 
 
+step 2: A call back function is only passed as an argument to the function. 
 
+step 3: The call back function is passed as an argument to that Eventlistner
 
+step 4: And document.addEventListener is used , and it takes two argumets. 
+
+step 5: first argument is must be an evet, and the seconde argument is must be an callback function. 
+
+step 6: When the event is happened, at the time the event listener executes that parameter call back function. 
+
+#### Psudocode: 
+```
+FUNCTION callback = () => 
+    console.log(this)
+ENDFUNCTION
+
+document.addEventListener("click", callback);
+
+FUNCTION callBack() 
+    console.log("Hi I am in Normal function")
+ENDFUNCTION
+
+document.addEventListener("onresize", callBack)
+```
+
+#### 4: SetTimeOut.js
+
+#### Algorithm
+
+step1: 
+
+#### 5: Class And Static Method
+
+#### Algorithm: 
+
+step 1: first I create a class with a name Detail. 
+
+step 2: Inside the Detail constructor, the constructor takes the two parameter which is called name and detail. 
+
+step 3: And the class have a method named classMethod(). 
+
+step 4: And the have an condition to print the variable name and address. 
+
+step 5: 
