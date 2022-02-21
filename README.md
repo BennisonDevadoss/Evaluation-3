@@ -40,4 +40,31 @@ step 2: Inside the function I created an logic to find the permutaion.
 
 step 3: Inside the function (permutation),, First the parameter string is converted to array by the split method(). 
 
-step 4: And the next stap e
+step 4: And the next stap, the array index place will be changed. 
+
+step 5: Once the array value is modified,then the modified array will be printed immediatly. 
+
+#### Psudocode.
+```
+FUNCTION permutation(string) {
+    SET length = string.length;
+    SET temp = [];
+    SET arr = string.split("");
+    FOR (let j = 0; j < length; j++) 
+        FOR(i = 0; i < length - 1; i++) 
+            temp = arr[i]
+            arr[i] = arr[i + 1]
+            arr[i + 1] = temp
+            PRINT arr.join(",")
+        ENDFOR
+    ENDFOR
+}
+permutation("ABCD")
+```
+
+#### 3: 
+
+
+
+
+
