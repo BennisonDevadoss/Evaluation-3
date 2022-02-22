@@ -124,10 +124,6 @@ FOR(let i = 1; i < 10; i++) {
 }
 ```
 
-#### Algorithm
-
-step1: 
-
 #### 5: Class And Static Method
 
 #### Algorithm: 
@@ -299,7 +295,48 @@ ex()
 
 #### Algorithm 
 
-step 1: Wrote an html file, and that file 
+step 1: Wrote an html file, and that file have an titile, 
+
+step 2: In this program I create an custom event listener to change the file title and content and color. 
+
+step 3: First, create an const variable and initialize the custome event called numberchanged. 
+
+step 4: And the event object have an some property such as detail. and the proepty detail is also an objects. 
+
+step 5: Finally, the Custom event will be dispatched. 
+
+step 6: Then only the event will be tracked by the call stack. 
+
+#### Psudocode: 
+```
+<html>
+<head>
+    <title>
+        Custom Events in JavaScript
+    </title>
+</head>
+<body>
+    <h2 id="number">Hello</h2>
+    <script type="text/javascript">
+        const headerTage = document.getElementById("number");
+        console.log(headerTage);
+        headerTage.addEventListener("numberChanged", function (e) {
+            headerTage.textContent = e.detail.number;
+            headerTage.style.color = e.detail.textColor;
+        });
+        function changeNumber(n, c) {
+            const event = new CustomEvent("numberChanged", {
+                detail: {
+                    number: n,
+                    textColor: c
+                }
+            })
+            headerTage.dispatchEvent(event);
+        }
+    </script>
+</body>
+</html>
+```
 
 #### 10: Super keyword inside the class
 
