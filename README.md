@@ -295,6 +295,12 @@ ex()
 * And finally, that call back function is executed by the call stack. 
 ```
 
+#### 9: Custom Event
+
+#### Algorithm 
+
+step 1: Wrote an html file, and that file 
+
 #### 10: Super keyword inside the class
 
 #### Algorithm: 
