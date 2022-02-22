@@ -96,6 +96,34 @@ document.addEventListener("onresize", callBack)
 
 #### 4: SetTimeOut.js
 
+#### Algorithm: 
+
+step 1: Inside the for loop, that for loop have an condition setTimeOut
+
+step 2: And the setTimeOut function have an condtion and time. 
+
+step 3: The setTimeOut have an condition, and the condition will print the value of variable k. 
+
+step 4: The call stack don't waits untill the timer is finished, the call stack goes to to execute the next line. 
+
+step 5: This is why the the call stack don't wait to execute the setTimeOut. 
+
+step 6: After the setTimeOut function, and that setTimeOut function's call back functon move to call back queue. 
+
+step 7: Then the event listener moves the call back function to call stack. 
+
+step 8: Then only, the call back function is executed. 
+
+#### Psudocode: 
+```
+FOR(let i = 1; i < 10; i++) {
+    SET k = i;
+    setTimeout(FUNCTION () {
+        PRINT k
+    }, 1000 * (k + 1));
+}
+```
+
 #### Algorithm
 
 step1: 
